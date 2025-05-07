@@ -1,12 +1,6 @@
-# --- Frontend ---
-streamlit
-requests
-pandas
-matplotlib
-calplot
-
-# --- Backend ---
 flask
-flask_cors
+flask-cors
 pymongo
 dnspython
+streamlit
+requests
