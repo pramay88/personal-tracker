@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: flask-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn backend.app:app
+    autoDeploy: true
+
+  - type: web
+    name: streamlit-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run frontend/app_streamlit.py --server.port 10000
+    envVars:
+      - key: FLASK_API_URL
+        value: https://flask-api.onrender.com

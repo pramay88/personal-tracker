@@ -1,0 +1,12 @@
+# --- Frontend ---
+streamlit
+requests
+pandas
+matplotlib
+calplot
+
+# --- Backend ---
+flask
+flask_cors
+pymongo
+dnspython
